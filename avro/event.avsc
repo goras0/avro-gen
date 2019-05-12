@@ -1,0 +1,59 @@
+Hello World!
+{
+  "type" : "record",
+  "name" : "Event",
+  "namespace" : "test.model",
+  "doc" : "Schema for test.model.Event",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "int"
+  }, {
+    "name" : "name",
+    "type" : [ "null", "string" ]
+  }, {
+    "name" : "pdAr",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "ProductArrangement",
+      "doc" : "Schema for test.model.ProductArrangement",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "int"
+      }, {
+        "name" : "name",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "product",
+        "type" : [ "null", {
+          "type" : "record",
+          "name" : "Product",
+          "doc" : "Schema for test.model.Product",
+          "fields" : [ {
+            "name" : "id",
+            "type" : "int"
+          }, {
+            "name" : "name",
+            "type" : [ "null", "string" ]
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "name" : "updateEvent",
+    "type" : [ "null", {
+      "type" : "record",
+      "name" : "UpdateEvent",
+      "doc" : "Schema for test.model.UpdateEvent",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "int"
+      }, {
+        "name" : "name",
+        "type" : [ "null", "string" ]
+      }, {
+        "name" : "pdAr",
+        "type" : [ "null", "ProductArrangement" ]
+      } ]
+    } ]
+  } ]
+}
